@@ -29,4 +29,4 @@ private:
 		//dont forget +1 to reflect the real height
 		return left > right ? left + 1 : right + 1;
 	}
-}
+};

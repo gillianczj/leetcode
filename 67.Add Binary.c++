@@ -31,4 +31,4 @@ public:
 		reverse(ret.begin(), ret.end());
 		return ret;	
 	}
-}
+};
