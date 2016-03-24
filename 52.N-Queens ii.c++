@@ -12,7 +12,7 @@ private:
 			++num;
 			return;
 		}
-
+		//backtracking
 		for(int icol = 0; icol < n; ++icol) {
 			if(valid(icol, irow, col)) {
 				col.push_back(icol);
@@ -26,7 +26,7 @@ private:
 		if(irow < col.size()) {
 			return false;
 		}
-
+		//check column and diag
 		for(int i = 0; i < col.size(); ++i) {
 			if(col[i] == icol || abs(irow - i) == abs(icol - col[i]) {
 				return false;
