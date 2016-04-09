@@ -1,3 +1,6 @@
+#include <vector>
+
+using namespace std;
 class solution {
 public:
 	int removeDuplicates(vector<int>& nums) {
@@ -9,10 +12,9 @@ public:
 		}//only one element no duplicates
 
 		bool dup = false;
-		int i = 1;
 		int j = 0;//two pointers
 
-		for(int i = 1; i < nums.size(); ++i) {
+		for(int i = 1; i < (int)nums.size(); ++i) {
 			if(nums[i] == nums[i - 1]) {
 				if(dup) {continue;}//skip this number due two more than twice duplicates
 				else {
@@ -27,3 +29,7 @@ public:
 		return j + 1;
 	}
 };
+
+int main(){
+    return 0;
+}
