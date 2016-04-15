@@ -1,3 +1,4 @@
+//non recursive
 class solution {
 public:
 	vector<int> inorderTraversal(TreeNode* root) {
@@ -22,3 +23,22 @@ public:
 		return ret;
 	}
 }
+
+//recursive
+class solution {
+public:
+	vector<int> inorderTraversal(TreeNode* root) {
+		vector<int> ret;
+		inorder(root, ret);
+		return ret;
+	}
+private:
+	bool inorder(TreeNode* root, vector<int>& ret) {
+		if(!root) {
+			return;
+		}
+		inorder(root->left, ret);
+		ret.push_back(root->val);
+		inorder(root->right, ret);
+	}
+};
