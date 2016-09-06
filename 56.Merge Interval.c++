@@ -1,11 +1,10 @@
+struct comp {
+    bool operator()(const Interval& a, const Interval& b) {
+        return a.start < b.start;
+    }
+};
 class solution {
 public:
-	struct comp {
-		bool operator()(Interval& a, Interval& b) {
-			return a.start < b.start;
-		}
-	};
-
 	vector<Interval> merge(vector<Interval>& intervals) {
 		vector<Interval> ret;
 		if(intervals.empty()) {return ret;}
@@ -20,3 +19,4 @@ public:
 	}
 	return ret;
 };
+
