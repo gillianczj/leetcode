@@ -1,3 +1,4 @@
+//solution one
 class solution {
 public:
 	int findCelebrity(int n) {
@@ -22,5 +23,24 @@ public:
 		}
 
 		return i;
+	}
+};
+
+//solution two
+class Solution {
+public:
+	int findCelebrity(int n) {
+		int cele = 0;
+		for(int i = 0; i < n; ++i) {
+			if(know(cele, i)) {
+				cele = i;
+			}
+		}
+		for(int i = 0; i < n; ++i) {
+			if(cele != i && (!know(i, cele) || know(cele, i))) {
+				return -1;
+			}
+		}
+		return cele;
 	}
 };
